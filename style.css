@@ -3,7 +3,7 @@ Theme Name: LZ Child
 Author: Claudio
 Description: Tema per webapp Lidia Zucaro
 Version: 1.0
-Template: [nome-esatto-tema-padre]  /* es. salone-parrucchiera */
+Template: salone-parrucchiera
 Text Domain: salone-parrucchiera
 */
 
@@ -64,3 +64,8 @@ body.dashboard-page {
 
 /* Responsive tables per CLIENTI */
 .table-responsive { overflow-x: auto; }
+
+.hero-wrap .btn {
+  @apply shadow-xl hover:scale-105 transition-all font-bold text-lg py-4 px-6;
+}
+.logo-lz { @apply text-emerald-600 tracking-wider; } /* Match salone */
