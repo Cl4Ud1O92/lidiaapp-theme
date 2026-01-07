@@ -1,13 +1,15 @@
 /*
 Theme Name: LZ Child
 Author: Claudio
-Description: Tema per webapp
+Description: Tema per webapp Lidia Zucaro
 Version: 1.0
+Template: [nome-esatto-tema-padre]  /* es. salone-parrucchiera */
 Text Domain: salone-parrucchiera
 */
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700');
 
+/* Import CSS padre (relativi) */
 @import "css/open-iconic-bootstrap.min.css";
 @import "css/animate.css";
 @import "css/owl.carousel.min.css";
@@ -20,3 +22,45 @@ Text Domain: salone-parrucchiera
 @import "css/flaticon.css";
 @import "css/icomoon.css";
 @import "css/style.css";
+
+/* NUOVO: Tailwind CDN (solo per dashboard) */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom Dashboard (da bozza MOBILE1.jpg) */
+body.dashboard-page { 
+  font-family: 'Montserrat', sans-serif; 
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+.logo-lz { 
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 700; 
+  font-size: clamp(2.5rem, 12vw, 5rem); 
+  color: #1e293b; 
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.stats-green { background: linear-gradient(135deg, #10b981, #059669); }
+.stats-orange { border: 2px solid #f59e0b; }
+.search-input { 
+  @apply px-4 py-3 rounded-xl border-2 border-orange-400 focus:border-orange-500 focus:outline-none bg-white shadow-lg;
+}
+.btn-svuota { 
+  @apply px-6 py-3 bg-orange-500 text-white rounded-xl font-bold hover:bg-orange-600 transition-all shadow-lg;
+}
+.tab-btn { 
+  @apply px-4 py-3 rounded-2xl font-bold text-slate-600 transition-all;
+}
+.tab-btn[data-active="true"] { 
+  @apply bg-slate-200 text-slate-900 shadow-md transform scale-105;
+}
+.mobile-bottom-nav { 
+  backdrop-filter: blur(20px); 
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+}
+@media (min-width: 768px) {
+  .mobile-bottom-nav { position: static !important; transform: none !important; }
+}
+
+/* Responsive tables per CLIENTI */
+.table-responsive { overflow-x: auto; }
